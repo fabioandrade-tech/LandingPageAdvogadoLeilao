@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoria Arrematação Estratégica | Blindagem Jurídica & Lucro Real</title>
+    <meta name="description" content="Domine o mercado de leilões de imóveis com quem opera no Direito Imobiliário desde 2013. Segurança jurídica e lucratividade documentada.">
+    
+    <!-- Meta Tags SEO / OG -->
+    <meta property="og:title" content="Mentoria Arrematação Estratégica">
+    <meta property="og:description" content="Aprenda a arrematar, regularizar e lucrar com segurança jurídica.">
+    <meta property="og:type" content="website">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+
+    <!-- Frameworks & Bibliotecas -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#020617',
+                        gold: '#C5A059',
+                        goldLight: '#D4AF37',
+                        slateText: '#94A3B8',
+                        offWhite: '#F8FAFC',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --gold-gradient: linear-gradient(90deg, #C5A059 0%, #D4AF37 100%);
+        }
+
+        body {
+            background-color: #020617;
+            color: #F8FAFC;
+            overflow-x: hidden;
+        }
+
+        .text-gold {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            /*-webkit-text-fill-color: transparent;*/
+            display: inline;
+        }
+
+        .gold-border {
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gold-border:hover {
+            border-color: #C5A059;
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-mesh {
+            background-image: radial-gradient(circle at 50% -20%, rgba(197, 160, 89, 0.15) 0%, transparent 50%),
+                              radial-gradient(circle at 0% 100%, rgba(15, 23, 42, 1) 0%, transparent 40%);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gold-gradient);
+            z-index: 100;
+            width: 0%;
+        }
+
+        .char { display: inline-block; opacity: 0; transform: translateY(20px); white-space: pre;}
+
+        .btn-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(197, 160, 89, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+        }
+
+        /* Clamp Text Utilities */
+        .h-clamp { font-size: clamp(2.5rem, 8vw, 4.5rem); }
+        .sub-clamp { font-size: clamp(1rem, 2vw, 1.25rem); }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <div class="progress-bar" id="reading-progress"></div>
+
+    <!-- Sticky CTA WhatsApp -->
+    <a href="#" class="fixed bottom-8 right-8 z-50 bg-[#25D366] p-4 rounded-full shadow-2xl hover:scale-110 transition-transform group">
+        <i data-lucide="message-circle" class="text-white w-7 h-7"></i>
+        <span class="absolute right-full mr-4 bg-white text-black px-3 py-1 rounded text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Falar com Especialista</span>
+    </a>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 pb-12 hero-mesh px-6">
+        <div class="container mx-auto text-center relative z-10">
+            <div class="flex justify-center gap-4 mb-8">
+                <span class="glass px-4 py-1 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase text-gold border border-gold/20">
+                    Estratégia Jurisprudencial
+                </span>
+            </div>
+            
+            <h1 class="font-serif h-clamp leading-[1.0] mb-8 font-black text-center break-keep" id="hero-text">
+                Transforme leilões de imóveis em uma fonte real de renda — com 
+                <span class="text-gold">respaldo jurídico.</span> 
+            </h1>
+
+            <p class="font-sans sub-clamp text-slateText max-w-3xl mx-auto mb-12 leading-relaxed opacity-0 translate-y-10 hero-sub">
+                Aprenda com advogado especialista e investidor ativo desde 2013 a arrematar, regularizar e lucrar com segurança documentada.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 opacity-0 translate-y-10 hero-btns">
+                <button class="bg-gold text-primary font-black px-10 py-5 rounded-sm hover:bg-goldLight transition-all uppercase tracking-tighter btn-pulse">
+                    Quero começar a investir com segurança
+                </button>
+            </div>
+
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto opacity-0 translate-y-10 hero-badges">
+                <div class="flex items-center justify-center gap-3 text-slateText">
+                    <i data-lucide="shield-check" class="text-gold w-5 h-5"></i>
+                    <span class="text-xs font-bold uppercase tracking-widest">11+ anos de atuação</span>
+                </div>
+                <div class="flex items-center justify-center gap-3 text-slateText">
+                    <i data-lucide="check-circle" class="text-gold w-5 h-5"></i>
+                    <span class="text-xs font-bold uppercase tracking-widest">Método Validado</span>
+                </div>
+                <div class="flex items-center justify-center gap-3 text-slateText">
+                    <i data-lucide="gavel" class="text-gold w-5 h-5"></i>
+                    <span class="text-xs font-bold uppercase tracking-widest">Suporte Jurídico</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- A DOR -->
+    <section class="py-24 px-6 bg-primary">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl mb-6 italic">O medo de perder dinheiro trava você?</h2>
+                <p class="text-slateText max-w-2xl mx-auto">A maioria desiste antes de começar e perde lucros extraordinários por falta de estratégia e pavor da burocracia.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass p-8 gold-border rounded-xl reveal-up">
+                    <i data-lucide="alert-octagon" class="text-gold mb-6 w-10 h-10"></i>
+                    <h3 class="font-bold text-lg mb-4">Riscos Ocultos</h3>
+                    <p class="text-slateText text-sm leading-relaxed">Dívidas de condomínio e IPTU que não aparecem no edital e destroem sua margem.</p>
+                </div>
+                <div class="glass p-8 gold-border rounded-xl reveal-up">
+                    <i data-lucide="key" class="text-gold mb-6 w-10 h-10"></i>
+                    <h3 class="font-bold text-lg mb-4">Desocupação</h3>
+                    <p class="text-slateText text-sm leading-relaxed">O receio de lidar com o antigo morador e processos judiciais intermináveis.</p>
+                </div>
+                <div class="glass p-8 gold-border rounded-xl reveal-up">
+                    <i data-lucide="file-warning" class="text-gold mb-6 w-10 h-10"></i>
+                    <h3 class="font-bold text-lg mb-4">Documentação</h3>
+                    <p class="text-slateText text-sm leading-relaxed">A insegurança em registrar a carta de arrematação e ITBI de forma correta.</p>
+                </div>
+                <div class="glass p-8 gold-border rounded-xl reveal-up">
+                    <i data-lucide="trending-down" class="text-gold mb-6 w-10 h-10"></i>
+                    <h3 class="font-bold text-lg mb-4">Sem Direcionamento</h3>
+                    <p class="text-slateText text-sm leading-relaxed">Tentar a sorte sem um passo a passo jurídico validado por quem arremata mensalmente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTORIDADE -->
+    <section class="py-24 px-6 relative overflow-hidden bg-slate-950">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative reveal-left">
+                <div class="absolute -inset-4 border border-gold/20 rounded-2xl transform rotate-3"></div>
+                <img src="images/IMG_1.jpeg" alt="Advogado Especialista">
+            </div>
+            <div class="reveal-right">
+                <span class="text-gold font-bold uppercase tracking-[0.3em] text-xs">O Mentor</span>
+                <h2 class="font-serif text-5xl mt-4 mb-8 leading-tight">Raciocínio jurídico aplicado ao <span class="italic">seu patrimônio.</span></h2>
+                <div class="space-y-6 text-slateText text-lg leading-relaxed">
+                    <p>Advogado especializado e investidor ativo desde 2013. Atuo na linha de frente: arrematações complexas e regularizações.</p>
+                    <p>Minha missão é desmistificar o mercado de leilões. Não entrego fórmulas mágicas, mas sim o rigor técnico e a inteligência jurídica que aplico diariamente na construção do meu próprio patrimônio.</p>
+                </div>
+                <div class="mt-10 flex gap-8 border-t border-white/10 pt-10">
+                    <div>
+                        <p class="text-gold font-serif text-3xl font-bold italic">11+</p>
+                        <p class="text-[10px] uppercase font-bold tracking-widest mt-1">Anos de Experiência</p>
+                    </div>
+                    <div>
+                        <p class="text-gold font-serif text-3xl font-bold italic">R$ 15M+</p>
+                        <p class="text-[10px] uppercase font-bold tracking-widest mt-1">Em Arrematações</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROVA DE CONCEITO -->
+    <section class="py-24 px-6 bg-primary">
+        <div class="container mx-auto">
+            <div class="max-w-5xl mx-auto glass rounded-3xl p-8 md:p-16 border border-gold/30 relative overflow-hidden reveal-up">
+                <div class="absolute top-0 right-0 p-8 opacity-10">
+                    <i data-lucide="trending-up" class="w-32 h-32"></i>
+                </div>
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="font-serif text-3xl md:text-4xl mb-6">A Oportunidade Real</h2>
+                        <p class="text-slateText mb-8">Veja a anatomia de um lucro real. Este não é um caso isolado, é o resultado de uma análise criteriosa de edital.</p>
+                        <div class="bg-primary/50 p-6 rounded-xl border border-white/5">
+                            <p class="text-xs uppercase font-bold text-gold mb-2">Estudo de Caso Real</p>
+                            <p class="font-serif text-2xl">Arrematação: <span class="text-offWhite">R$ 116.000</span></p>
+                            <p class="font-serif text-2xl mt-2">Revenda: <span class="text-gold">R$ 224.000</span></p>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-right">
+                        <p class="text-7xl font-serif text-gold font-bold italic">93%</p>
+                        <p class="text-xl uppercase font-bold tracking-tighter mt-2">De ROI Bruto</p>
+                        <p class="text-xs text-slateText mt-6 italic">* Resultados variam conforme o mercado, capital e execução das estratégias mentoradas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTORIA ROADMAP -->
+    <section class="py-24 px-6 bg-slate-950">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="font-serif text-4xl text-center mb-20 italic">O seu roadmap para a Arrematação Blindada</h2>
+            <div class="space-y-12">
+                <div class="flex gap-8 reveal-up">
+                    <div class="flex-none w-12 h-12 bg-gold rounded-full flex items-center justify-center text-primary font-bold">01</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Radar de Oportunidades</h3>
+                        <p class="text-slateText">Aprenda a filtrar leilões judiciais e extrajudiciais antes mesmo deles caírem no radar comum do mercado.</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 reveal-up">
+                    <div class="flex-none w-12 h-12 bg-gold rounded-full flex items-center justify-center text-primary font-bold">02</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Anatomia do Edital</h3>
+                        <p class="text-slateText">Leitura cirúrgica para identificar nulidades, ônus ocultos e brechas que afastam amadores mas criam fortunas.</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 reveal-up">
+                    <div class="flex-none w-12 h-12 bg-gold rounded-full flex items-center justify-center text-primary font-bold">03</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Arremate Estratégico</h3>
+                        <p class="text-slateText">Cálculo de lance máximo, análise de concorrência e o uso estratégico do parcelamento legal (Art. 895 CPC).</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 reveal-up">
+                    <div class="flex-none w-12 h-12 bg-gold rounded-full flex items-center justify-center text-primary font-bold">04</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Blindagem Jurídica</h3>
+                        <p class="text-slateText">Posse rápida, cancelamento de gravames, registro e desocupação sem desgaste emocional.</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 reveal-up">
+                    <div class="flex-none w-12 h-12 bg-gold rounded-full flex items-center justify-center text-primary font-bold">05</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Revenda Acelerada</h3>
+                        <p class="text-slateText">Preparação do ativo para o mercado de varejo imobiliário e realização do lucro líquido.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 px-6 bg-primary">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="font-serif text-4xl text-center mb-16 italic">Inteligência Contra Objeções</h2>
+            <div class="space-y-4">
+                <details class="group glass p-6 rounded-xl gold-border cursor-pointer reveal-up">
+                    <summary class="flex justify-between items-center font-bold">
+                        Não tenho nenhuma experiência na área. É para mim?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="mt-4 text-slateText text-sm leading-relaxed">
+                        A mentoria foi desenhada para quem começa do zero absoluto. Entregamos os checklists e modelos que eu uso no meu escritório, traduzindo o "juridiquês" para a prática.
+                    </div>
+                </details>
+                <details class="group glass p-6 rounded-xl gold-border cursor-pointer reveal-up">
+                    <summary class="flex justify-between items-center font-bold">
+                        Preciso de milhões para começar?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="mt-4 text-slateText text-sm leading-relaxed">
+                        Não. Ensinamos estratégias de arrematação parcelada (25% entrada + 30 meses) e como identificar imóveis de menor valor com alta liquidez.
+                    </div>
+                </details>
+                <details class="group glass p-6 rounded-xl gold-border cursor-pointer reveal-up">
+                    <summary class="flex justify-between items-center font-bold">
+                        Como lidar com imóvel ocupado?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="mt-4 text-slateText text-sm leading-relaxed">
+                        Você dominará as técnicas de desocupação estratégica — desde a negociação amigável (técnica da chave) até a imissão na posse judicial acelerada.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FECHAMENTO -->
+    <section class="py-24 px-6 bg-slate-950 text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Luxury House" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto relative z-10">
+            <h2 class="font-serif text-5xl mb-8 leading-tight max-w-4xl mx-auto">Não assista as oportunidades passarem. <span class="text-gold">Domine o mercado agora.</span></h2>
+            <button class="bg-gold text-primary font-black px-12 py-6 rounded-sm text-xl uppercase hover:scale-105 transition-all shadow-[0_0_50px_rgba(197,160,89,0.3)] btn-pulse">
+                Quero meu acesso à mentoria
+            </button>
+            <div class="mt-16 border-t border-white/5 pt-12 text-[10px] uppercase tracking-[0.4em] text-slateText space-y-4">
+                <p>Investimentos envolvem riscos. Caráter estritamente educativo.</p>
+                <p class="text-offWhite font-bold font-serif italic text-sm">Marcus Vibe — OAB/SP nº 000.000</p>
+                <p>© 2024 Weverton Andrade. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Inicializar ícones
+        lucide.createIcons();
+
+        // Registro de ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Barra de progresso de leitura
+        gsap.to("#reading-progress", {
+            width: "100%",
+            ease: "none",
+            scrollTrigger: { scrub: 0.3 }
+        });
+
+        // Revelação de texto do Hero (Agrupando por palavras para não quebrar)
+        const textElement = document.querySelector('#hero-text');
+        const originalHTML = textElement.innerHTML;
+        textElement.innerHTML = '';
+
+        // Função auxiliar para processar o texto e manter as palavras unidas
+        function processText(text, container, isGold = false) {
+            const words = text.split(' ');
+            
+            words.forEach((word, wordIndex) => {
+                if (word === '') return;
+
+                // Cria um span para a palavra inteira
+                const wordSpan = document.createElement('span');
+                wordSpan.style.whiteSpace = 'nowrap'; // ISSO impede que a palavra quebre no meio
+                wordSpan.style.display = 'inline-block';
+                if (isGold) wordSpan.className = 'text-gold';
+
+                word.split('').forEach(char => {
+                    const s = document.createElement('span');
+                    s.className = 'char';
+                    s.textContent = char;
+                    wordSpan.appendChild(s);
+                });
+
+                container.appendChild(wordSpan);
+
+                // Adiciona o espaço entre as palavras (fora do span da palavra)
+                if (wordIndex < words.length - 1) {
+                    container.appendChild(document.createTextNode(' '));
+                }
+            });
+        }
+
+        // Lógica para lidar com o <span> que já existe no HTML
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = originalHTML;
+
+        tempDiv.childNodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                processText(node.textContent, textElement);
+            } else if (node.nodeName === 'SPAN') {
+                processText(node.textContent, textElement, true);
+            }
+        });
+
+        // A animação do GSAP continua a mesma, pois as classes .char ainda existem
+        const timeline = gsap.timeline();
+        timeline.to(".char", {
+            opacity: 1,
+            y: 0,
+            stagger: 0.02,
+            duration: 0.8,
+            ease: "power4.out"
+        })
+        .to(".hero-sub", { opacity: 1, y: 0, duration: 1 }, "-=0.4")
+        .to(".hero-btns", { opacity: 1, y: 0, duration: 1 }, "-=0.6")
+        .to(".hero-badges", { opacity: 1, y: 0, duration: 1 }, "-=0.8");
+
+        // Animações de Scroll
+        gsap.utils.toArray(".reveal-up").forEach(el => {
+            gsap.from(el, {
+                y: 60,
+                opacity: 0,
+                duration: 1.2,
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+
+        gsap.from(".reveal-left", {
+            x: -100,
+            opacity: 0,
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: ".reveal-left",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".reveal-right", {
+            x: 100,
+            opacity: 0,
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: ".reveal-right",
+                start: "top 80%"
+            }
+        });
+
+        // Parallax suave imagem mentor
+        gsap.to(".mentor-img", {
+            y: -30,
+            scrollTrigger: {
+                trigger: ".mentor-img",
+                scrub: true
+            }
+        });
+    </script>
+</body>
+</html>
