@@ -1,0 +1,63 @@
+    :root {
+        --gold-gradient: linear-gradient(90deg, #C5A059 0%, #D4AF37 100%);
+    }
+
+    body {
+        background-color: #020617;
+        color: #F8FAFC;
+        overflow-x: hidden;
+    }
+
+    .text-gold {
+        background: var(--gold-gradient);
+        -webkit-background-clip: text;
+        /*-webkit-text-fill-color: transparent;*/
+        display: inline;
+    }
+
+    .gold-border {
+        border: 1px solid rgba(197, 160, 89, 0.3);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gold-border:hover {
+        border-color: #C5A059;
+        box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+    }
+
+    .glass {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .hero-mesh {
+        background-image: radial-gradient(circle at 50% -20%, rgba(197, 160, 89, 0.15) 0%, transparent 50%),
+                          radial-gradient(circle at 0% 100%, rgba(15, 23, 42, 1) 0%, transparent 40%);
+    }
+
+    .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: var(--gold-gradient);
+        z-index: 100;
+        width: 0%;
+    }
+
+    .char { display: inline-block; opacity: 0; transform: translateY(20px); white-space: pre;}
+
+    .btn-pulse {
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.4); }
+        70% { box-shadow: 0 0 0 15px rgba(197, 160, 89, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+    }
+
+    /* Clamp Text Utilities */
+    .h-clamp { font-size: clamp(2.5rem, 8vw, 4.5rem); }
+    .sub-clamp { font-size: clamp(1rem, 2vw, 1.25rem); }
